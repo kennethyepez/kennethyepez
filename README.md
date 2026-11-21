@@ -24,9 +24,12 @@ Each repository documents its setup, implementation scope, and known limitations
 
 - Define the problem, constraints, and acceptance criteria before implementation.
 - Direct AI coding agents through scoped changes and review their output against the intended behavior.
-- Keep changes in focused commits with descriptive messages.
+- Use issues with acceptance criteria, focused commits, and PRs with verification and recovery evidence.
+- Require CI and the configured automated reviews before merging into protected application branches.
 - Check integrations and failure paths, preserve recovery points, and distinguish test fixtures from real-provider results.
 - Document what was verified and what still needs validation.
+
+A [measured JEV workflow case](https://github.com/m8appz-dotcom/jev-contact-center-qa/blob/mvp-qa/docs/CASE-STUDY.md) shows the problem, implementation responsibility, all campaign outputs, actual local timings, and the limits of an offline test.
 
 See [engineering workflow and repository evidence](docs/ENGINEERING-WORKFLOW.md) for concrete commits, evaluation artifacts, and examples of these decisions.
 
