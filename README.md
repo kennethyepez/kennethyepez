@@ -4,14 +4,15 @@
 
 I turn product requirements into AI workflows and direct coding agents through implementation, integration and validation. I use AI to write the code under my direction. My work covers the problem, architecture, delivery constraints and decisions about what the evidence establishes.
 
-## Start with these two projects
+## Selected projects
 
 | Project | What to inspect | Evidence |
 | --- | --- | --- |
+| [Fish Free MCP](https://github.com/kennethyepez/fish-free-mcp) | Passkey-protected Gemini integration, scoped OAuth, idempotent speech jobs and private audio delivery. | [Architecture](https://github.com/kennethyepez/fish-free-mcp/blob/main/docs/ARCHITECTURE.md), [21-test CI](https://github.com/kennethyepez/fish-free-mcp/actions/runs/45053439926) and [desktop/mobile screenshots](https://github.com/kennethyepez/fish-free-mcp#screenshots). |
 | [Content Engine V2](https://github.com/m8appz-dotcom/content-engine-v2) | Evidence-backed scripts, revision-bound approval and native storyboard planning. | [Case](https://github.com/m8appz-dotcom/content-engine-v2/blob/main/docs/CASE-STUDY.md): actual offline artifacts, current screens and workspace recording. |
 | [M8 Live Voice Assistant](https://github.com/m8appz-dotcom/m8-live-voice-assistant-public) | Expo and a private ASR → streaming LLM → English speech relay. | [Case](https://github.com/m8appz-dotcom/m8-live-voice-assistant-public/blob/main/docs/CASE-STUDY.md): original service audio, development measurements and remaining acceptance. |
 
-Maintained under [M8 Apps](https://github.com/m8appz-dotcom). M8's default voice pathway uses private inference; Gemini is an explicit legacy rollback option.
+The content and voice-assistant cases are maintained under [M8 Apps](https://github.com/m8appz-dotcom). The voice assistant's default pathway uses private inference; Gemini is an explicit legacy rollback option.
 
 ## Supporting work
 
