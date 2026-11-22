@@ -2,37 +2,34 @@
 
 **Applied AI Engineering · AI Agents · LLM Applications**
 
-I design and build AI applications, from product requirements and architecture through integration, testing, and deployment. I use AI coding agents to write the implementation under my direction.
+I turn product requirements into AI workflows and direct coding agents through implementation, integration and validation. I use AI to write the code under my direction. My work covers the problem, architecture, delivery constraints and decisions about what the evidence establishes.
 
-My work focuses on connecting models to useful workflows: voice assistants, quality assurance, evidence-backed content production, and tools that agents can operate.
+## Start with these two projects
 
-## Selected projects
-
-These projects are maintained under [M8 Apps](https://github.com/m8appz-dotcom). My role covers product definition, architecture, technical direction, integration, validation, and deployment.
-
-| Project | What it does | Engineering focus |
+| Project | What to inspect | Evidence |
 | --- | --- | --- |
-| [Content Engine V2](https://github.com/m8appz-dotcom/content-engine-v2) | Builds content drafts from evidence with human approval gates. | Structured outputs, evidence mapping, job state, evaluation, and auditability. |
-| [JEV Contact Center QA](https://github.com/m8appz-dotcom/jev-contact-center-qa) | Scores Spanish support transcripts and routes uncertain cases to reviewers. | Redaction, resumable batches, rubric scoring, and comparison with human labels. |
-| [Visual Development Toolkit](https://github.com/m8appz-dotcom/visual-development-toolkit) | Connects AI agents to visual-development and analysis tools through MCP. | Runtime adapters, reproducible tool configuration, integration checks, and upstream provenance. |
-| [M8 Live Voice Assistant](https://github.com/m8appz-dotcom/m8-live-voice-assistant-public) | Connects an Expo voice client, Gemini Live, and explicit OpenClaw-backed tools. | Realtime audio, backend bridging, sessions, and browser passkey integration. |
-| [Longform Video Engine](https://github.com/m8appz-dotcom/longform-video-engine) | Orchestrates voice, media, rendering, and QA from an approved script. | Input contracts, stage orchestration, provenance, and gated video output. |
+| [Content Engine V2](https://github.com/m8appz-dotcom/content-engine-v2) | Evidence-backed scripts, revision-bound approval and native storyboard planning. | [Case](https://github.com/m8appz-dotcom/content-engine-v2/blob/main/docs/CASE-STUDY.md): actual offline artifacts, current screens and workspace recording. |
+| [M8 Live Voice Assistant](https://github.com/m8appz-dotcom/m8-live-voice-assistant-public) | Expo and a private ASR → streaming LLM → English speech relay. | [Case](https://github.com/m8appz-dotcom/m8-live-voice-assistant-public/blob/main/docs/CASE-STUDY.md): original service audio, development measurements and remaining acceptance. |
 
-Each repository documents its setup, implementation scope, and known limitations. M8 Live is a sanitized public source snapshot; its earlier development history remains private.
+Maintained under [M8 Apps](https://github.com/m8appz-dotcom). M8's default voice pathway uses private inference; Gemini is an explicit legacy rollback option.
 
-## How I work
+## Supporting work
 
-- Define the problem, constraints, and acceptance criteria before implementation.
-- Direct AI coding agents through scoped changes and review their output against the intended behavior.
-- Use issues with acceptance criteria, focused commits, and PRs with verification and recovery evidence.
-- Require CI and the configured automated reviews before merging into protected application branches.
-- Check integrations and failure paths, preserve recovery points, and distinguish test fixtures from real-provider results.
-- Document what was verified and what still needs validation.
+- [JEV Contact Center QA](https://github.com/m8appz-dotcom/jev-contact-center-qa): redaction, rubric scoring and reviewer workflows. Its small synthetic evaluation exposes weak failure recall; the next evaluation needs independent labels.
+- [Visual Development Toolkit](https://github.com/m8appz-dotcom/visual-development-toolkit): portable MCP workflows, original-byte verification and tool provenance. Integrated engines retain upstream authorship.
+- [Longform Video Engine](https://github.com/m8appz-dotcom/longform-video-engine): script contracts and staged production. Its connected preview is a silent excerpt; a finished narrated film needs separate acceptance.
 
-A [measured JEV workflow case](https://github.com/m8appz-dotcom/jev-contact-center-qa/blob/mvp-qa/docs/CASE-STUDY.md) shows the problem, implementation responsibility, all campaign outputs, actual local timings, and the limits of an offline test.
+## Decisions I can explain
 
-See [engineering workflow and repository evidence](docs/ENGINEERING-WORKFLOW.md) for concrete commits, evaluation artifacts, and examples of these decisions.
+- Why evidence references, editorial truth and approval require separate checks.
+- Why the relay streams complete phrases and keeps account tools outside audio transport.
+- How to validate a migration in an isolated copy while preserving services, data and rollback.
+- How to distinguish authored examples, automated checks, service captures and physical user acceptance.
 
-## Technical areas
+The cases connect those decisions to source, outputs and limitations. They do not imply customer adoption, independent human review or a multi-person team.
 
-AI agents and tool calling · MCP integrations · TypeScript and Python applications · Realtime voice · Structured generation · Evaluation workflows · Multimodal production
+## Delivery
+
+Real issue → focused commits → PR → relevant checks and identified automated review → protected integration. Recovery history stays intact. Dependency migrations, shared infrastructure and product changes should remain independently reviewable.
+
+See [workflow and repository evidence](docs/ENGINEERING-WORKFLOW.md). I welcome a technical discussion of a failure, a tradeoff and the test that changed the implementation.
